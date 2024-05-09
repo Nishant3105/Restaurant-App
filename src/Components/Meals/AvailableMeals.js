@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './AvailableMeals.module.css'
-import classess from './MealItem.module.css'
+import MealItem from './MealItem/MealItem';
 
 const meals = [
     {
@@ -54,15 +54,23 @@ const meals = [
 ];
 
 const AvailableMeals = () => {
-
-    const mealList = meals.map((dish) => <li className={classess.meal} id={dish.id}><h2>{dish.name}</h2><p>{dish.description}</p><span>$ {dish.price}</span><hr></hr></li>)
+    const mealList = meals.map((meal) => {
+        return (
+            <MealItem
+                key={meal.id}
+                name={meal.name}
+                description={meal.description}
+                price={meal.price}
+            />
+        )
+    })
 
     return (
-        <React.Fragment>
-            <ul className={classes.meals}>
+        <section className={classes.meals}>
+            <ul>
                 {mealList}
             </ul>
-        </React.Fragment>
+        </section>
     )
 }
 
