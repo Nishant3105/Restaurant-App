@@ -1,10 +1,16 @@
-import Header from "./Components/Layout/Header"; 
+import React from 'react'
+
+import Header from "./Components/Layout/Header";
+import Meals from './Components/Meals/Meals';
 
 function App() {
   return (
-    <div>
-     <Header></Header>
-    </div>
+    <React.Fragment>
+      <Header></Header>
+      <main>
+        <Meals></Meals>
+      </main>
+    </React.Fragment>
   );
 }
 
