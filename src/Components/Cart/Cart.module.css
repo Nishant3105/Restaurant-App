@@ -1,7 +1,22 @@
 .cart-items {
     list-style: none;
+    height: 200px;
+    overflow-y: auto;
     margin: 0;
     padding: 0;
+}
+
+.empty-cart {
+    height: 100px;
+  }
+
+.cart-items p{
+    font-weight: bold;
+    color: brown
+}
+
+.cart-items h1{
+    color: red
 }
 
 .total {
@@ -36,6 +51,15 @@
 
 .actions .button--alt {
     color: #8a2b06;
+}
+
+.actions .button--add {
+    color: darkgreen;
+    border-radius: 0px;
+}
+.actions .button--remove {
+    color: darkred;
+    border-radius: 0px;
 }
 
 .actions .button {
